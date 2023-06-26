@@ -20,7 +20,6 @@ dependencies {
     // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
 
-
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:31.1-jre'
 }
@@ -35,4 +34,8 @@ java {
 application {
     // Define the main class for the application.
     mainClass = 'calculator.SumCalculator'
+}
+tasks.named('test', Test) {
+    useJUnitPlatform()
+
 }
